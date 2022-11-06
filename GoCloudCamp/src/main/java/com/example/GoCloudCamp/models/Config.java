@@ -5,8 +5,6 @@ import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import java.util.Map;
 
 @Entity
@@ -19,16 +17,13 @@ public class Config {
     private int id;
 
     @Column(name = "service_name")
-    @NotEmpty(message = "enter program name")
     private String service;
 
     @Type(type = "json")
     @Column(name = "data", columnDefinition = "json")
-    @NotEmpty(message = "enter program config")
     private Map<String, Object> data;
 
     @Column(name = "version")
-    @NotNull
     private int version;
 
     @Column(name = "active")

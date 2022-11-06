@@ -2,11 +2,9 @@ package com.example.GoCloudCamp.services;
 
 import com.example.GoCloudCamp.models.Service;
 import com.example.GoCloudCamp.repositories.ServiceRepository;
-import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 import java.util.Optional;
 
 @org.springframework.stereotype.Service

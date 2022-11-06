@@ -42,7 +42,7 @@ public class Client {
             System.out.println("Add Config: " + response.getGreeting());
 
 
-            response = configStub.getConfig(GoService.ConfigName.newBuilder().setName(config.getService()).build());
+            response = configStub.getActiveConfig(GoService.ConfigName.newBuilder().setName(config.getService()).build());
             System.out.println("Config: " + response.getGreeting());
 
 
@@ -51,7 +51,7 @@ public class Client {
             System.out.println("Update Config: " + response);
 
 
-            response = configStub.getConfig(GoService.ConfigName.newBuilder().setName(config.getService()).build());
+            response = configStub.getActiveConfig(GoService.ConfigName.newBuilder().setName(config.getService()).build());
             System.out.println("Config: " + response.getGreeting());
 
 
